@@ -4,7 +4,7 @@ I built this project to practically understand how gpt-style language models wor
 
 I implemented the main components myself using basic pytorch layers Instead of using a pretrained model.
 
-#Model Architecture
+## Model Architecture
 
 my model follows a decoder only transformer architecture.
 
@@ -19,7 +19,7 @@ It includes:
 
 
 
-#Configuration
+## Configuration
 
 
 | Parameter | Value |
@@ -33,7 +33,7 @@ It includes:
 | Learning rate | 0.001 |
 | Optimizer | AdamW |
 | Training steps | 3,000 |
-#Dataset
+## Dataset
 
 I trained the model on 'The Adventures of Tom Sawyer' that i obtained from Project Gutenberg(https://www.gutenberg.org/).
 
@@ -41,13 +41,13 @@ i cleaned then the text to remove the Project Gutenberg header and footer, and t
 
 Since the model is character level, each unique character is mapped to an integer ID.Andthe model learns to predict the next character from the preceding sequence.
 
-#Training
+## Training
 
 The model was trained using pytorch on my nvidia rtx 3050.
 
 I used cross entropy loss for the next character prediction and then evaluated the model on the training and validation sets throughout training.
 
-#Results
+## Results
 
 | Metric | Loss |
 |---|---|
@@ -59,7 +59,7 @@ I used cross entropy loss for the next character prediction and then evaluated t
 
 as we cam see the validation loss decreased steadily over the 3,000 training steps.I saved the best checkpoint and included it in the repository.
 
-#Text Generation
+## Text Generation
 
 The trained model generates text one character at a time by basically sampling from the predicted probability distribution.
 
@@ -78,7 +78,7 @@ Given the small model size and the small dataset, I expected the model to learn 
 
 
 
-#A few things I would explore next:
+## A few things I would explore next:
 
 - Subword tokenization instead of character-level tokenization
 - A larger training dataset
@@ -88,7 +88,7 @@ Given the small model size and the small dataset, I expected the model to learn 
 
 finally this project helped me connect the mathematical ideas behind attention with an actual working language model, from training to inference.
 
--References
+## References
 
 - Attention Is All You Need (https://arxiv.org/abs/1706.03762)
 - Andrej Karpathy, Let's build GPT(https://www.youtube.com/watch?v=kCc8FmEb1nY)
