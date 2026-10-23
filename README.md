@@ -1,4 +1,4 @@
-A small character level gpt model implemented in PyTorch and trained on 'The Adventures of Tom Sawyer by Mark Twain.
+A small character level gpt model implemented in PyTorch and trained on 'The Adventures of Tom Sawyer' by Mark Twain.
 
 I built this project to practically understand how gpt-style language models work especially key concepts like self attention,Transformer blocks and autoregressive text generation.
 
@@ -37,7 +37,7 @@ It includes:
 
 I trained the model on 'The Adventures of Tom Sawyer' that i obtained from Project Gutenberg(https://www.gutenberg.org/).
 
-i cleaned then the text to remove the Project Gutenberg header and footer, and then split it into 90% training data and 10% validation data.
+i cleaned the text to remove the Project Gutenberg header and footer, and then split it into 90% training data and 10% validation data.
 
 Since the model is character level, each unique character is mapped to an integer ID.Andthe model learns to predict the next character from the preceding sequence.
 
@@ -57,7 +57,7 @@ I used cross entropy loss for the next character prediction and then evaluated t
 | Best validation loss | 1.5430 |
 
 
-as we cam see the validation loss decreased steadily over the 3,000 training steps.I saved the best checkpoint and included it in the repository.
+as we cam see the validation loss decreased steadily over the 3,000 training steps.you can find the best checkpoint in the repository.
 
 ## Text Generation
 
